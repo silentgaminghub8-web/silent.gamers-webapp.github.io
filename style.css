@@ -1,0 +1,59 @@
+/* Sabhi default margin/padding ko hatata hai */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body aur HTML ko poori screen lene ke liye force karta hai aur scrollbar chupata hai */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    background-color: #000; /* Jab tak iframe load ho, background black rahega */
+}
+
+/* Iframe ko hamesha full screen rakhne ke liye best tareeka */
+#appFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Border hatane ke liye */
+}
+
+/* Install button ke container ka style */
+#install-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+#install-container.hidden {
+    display: none;
+}
+
+/* Install button ka style */
+#install-button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#install-button:hover {
+    background-color: #45a049;
+}
